@@ -1,0 +1,68 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Las dos filas con cuatro columnas del index*/
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/*Para que las imágenes no superen a sus contenedores*/
+.categorias img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Estilizar la barra de navegación*/
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Centrar los títulos de cada página*/
+header h1 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+/*Estilizar el mensaje de bienvenida*/
+.mensaje-bienvenida {
+    text-align: center;
+    font-size: large;
+    margin: 40px 0;
+}
+
+
+/*Colocar cada página con la imagen a la izquierda y la descripción a la derecha*/
+
+.pagina-arma {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.arma-imagen {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+.arma-contenido {
+    flex: 1;
+}
+
+/**/
