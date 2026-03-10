@@ -1,3 +1,13 @@
+/* NOTA GLOBAL: Se está usando Mobile First */
+
+
+/*Reset*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 a{
     text-decoration: none;
     color: black;
@@ -6,32 +16,33 @@ a{
 /*Las dos filas con cuatro columnas del index*/
 .categorias {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
-    padding: 20px;
+    margin: 0 20px;
 }
 
 /*Para que las imágenes no superen a sus contenedores*/
 .categorias img {
-    width: 100%;
-    height: auto;
     display: block;
+    width: 100%;
+}
+
+/*Estilizar el título de cada página*/
+header h1 {
+    text-align: center;
+    margin: 20px;
 }
 
 /*Estilizar la barra de navegación*/
 nav ul {
     display: flex;
+    flex-direction: column;
     list-style: none;
     padding: 0;
     margin: 0;
     gap: 20px;
     justify-content: center;
     align-items: center;
-}
-
-/*Centrar los títulos de cada página*/
-header h1 {
-    text-align: center;
 }
 
 footer {
@@ -45,24 +56,36 @@ footer {
     margin: 40px 0;
 }
 
-
 /*Colocar cada página con la imagen a la izquierda y la descripción a la derecha*/
 
 .pagina-arma {
     display: flex;
+    flex-direction: column;
     gap: 40px;
-    padding: 20px;
+    margin: 20px;
     align-items: flex-start;
 }
 
-.arma-imagen {
-    width: 300px;
-    max-width: 100%;
-    height: auto;
-}
-
-.arma-contenido {
-    flex: 1;
+.arma-imagen{
+    width: 100%;
 }
 
 /**/
+
+@media (min-width: 1024px) {
+    nav ul{
+        flex-direction: row;
+    }
+
+    .categorias{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .pagina-arma{
+        flex-direction: row;
+    }
+
+    .arma-imagen {
+        width: 300px;
+    }
+}
