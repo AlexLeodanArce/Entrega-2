@@ -13,6 +13,10 @@ a{
     color: black;
 }
 
+body{
+    font-family: revert;
+}
+
 /*Las dos filas con cuatro columnas del index*/
 .categorias {
     display: grid;
@@ -71,6 +75,14 @@ footer {
 }
 
 /**/
+
+h2{
+    margin-bottom: 10px;
+}
+
+h3{
+    margin: 10px 0;
+}
 
 @media (min-width: 1024px) {
     nav ul{
