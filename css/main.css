@@ -17,7 +17,7 @@ body{
     font-family: revert;
 }
 
-/*Las dos filas con cuatro columnas del index*/
+/* Se define la tabla como una columna con las filas que sean necesarias */
 .categorias {
     display: grid;
     grid-template-columns: 1fr;
@@ -29,6 +29,10 @@ body{
 .categorias img {
     display: block;
     width: 100%;
+}
+
+.categorias h2{
+    margin: 10px 0;
 }
 
 /*Estilizar el título de cada página*/
@@ -60,7 +64,7 @@ footer {
     margin: 40px 0;
 }
 
-/*Colocar cada página con la imagen a la izquierda y la descripción a la derecha*/
+/*Colocar cada página con la imagen arriba y la descripción abajo*/
 
 .pagina-arma {
     display: flex;
@@ -85,14 +89,18 @@ h3{
 }
 
 @media (min-width: 1024px) {
+
+    /*La barra de navegación se vuelve horizontal*/
     nav ul{
         flex-direction: row;
     }
 
+    /*Una tabla de cuatro columnas*/
     .categorias{
         grid-template-columns: repeat(4, 1fr);
     }
 
+    /*La página de información de cada arma se vuelve horizontal*/
     .pagina-arma{
         flex-direction: row;
     }
